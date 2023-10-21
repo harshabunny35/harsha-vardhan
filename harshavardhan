@@ -16,9 +16,9 @@ int main() {
     printf("enter the resistance value for 2nd resistor : ");
     scanf("%d", &resistance2);
 
-    if (strcmp(connection, parallel) == 0) {
+    if (strcmp(connection, parallel)) {
         printf("the equivalent resistance is : %f", (float)(resistance1 * resistance2) / (resistance1 + resistance2));
-    } else if (strcmp(connection, series) == 0) {
+    } else if (strcmp(connection, series)) {
         printf("equivalent resistance = %d", resistance1 + resistance2);
     }
 
