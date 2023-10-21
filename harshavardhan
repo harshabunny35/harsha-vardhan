@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int resistance1, resistance2;
+    char connection[20];
+    char series[] = "series";
+    char parallel[] = "parallel";
+
+    printf("enter the connection type : ");
+    fgets(connection, sizeof(connection), stdin);
+
+    printf("enter the resistance value for 1st resistor : ");
+    scanf("%d", &resistance1);
+
+    printf("enter the resistance value for 2nd resistor : ");
+    scanf("%d", &resistance2);
+
+    if (strcmp(connection, parallel) == 0) {
+        printf("the equivalent resistance is : %f", (float)(resistance1 * resistance2) / (resistance1 + resistance2));
+    } else if (strcmp(connection, series) == 0) {
+        printf("equivalent resistance = %d", resistance1 + resistance2);
+    }
+
+    return 0;
+}
